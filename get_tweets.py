@@ -8,17 +8,16 @@ Created on Thu Jan 18 10:37:20 2018
 # =============================================================================
 # 1. Download the tweets for a given user to create a corpus of text.
 # 2. Use the corpus to generate a sentence in the style of the Tweeter.
-# 3. Reply to a text message with that sentence.
 #
 # Example: https://filiph.github.io/markov/
 # Explanation: http://setosa.io/ev/markov-chains/
 # =============================================================================
 import tweepy, csv, re
 
-consumer_key = "oINjSqCwFA0fMxyLRTdroIwtc"
-consumer_secret = "YecCZkL76LY34iqwjWqk5cS9BeVbYWNjB27fFroqJaR3rCBaay"
-access_key = "2769671094-XdVSbcX0yvuK4xvzveZ0RtrTnmanVmIMOvN6OSL"
-access_secret = "bPpanWp0Xy57WMAB27laWRdf4KbBav3zb6CVwDnwQbcid"
+consumer_key = "YOURCONSUMERKEY"
+consumer_secret = "YOURCONSUMERSECRET"
+access_key = "YOURACCESSKEY"
+access_secret = "YOURACCESSSECRET"
 
 def get_all_tweets(screen_name):
     all_tweets = []
@@ -66,7 +65,7 @@ def write_tweets_to_csv(tweets):
                 writer.writerow([tweet])
 
 def main():
-    tweets = get_all_tweets('realDonaldTrump')
+    tweets = get_all_tweets('realDonaldTrump')  #Someone's Twitter ID
     write_tweets_to_csv(tweets)
 
 
